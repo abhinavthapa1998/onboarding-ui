@@ -1,0 +1,9 @@
+@import "../abstracts/__abstracts-dir.scss";
+
+.formButton{
+  border-radius: 5px;
+  height:30px;
+  width:100%;
+  color: $white;
+  background: $primary;
+}
