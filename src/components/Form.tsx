@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
 
-type Props = {}
+type Props = {};
 
 function Form({}: Props) {
   return (
-    <div>Form</div>
-  )
+    <div className="formContainer">
+      <h6>Full Name</h6>
+      <input type="text" placeholder="Steve Jobs" />
+      <h6>Display Name</h6>
+      <input type="text" placeholder="Steve" />
+    </div>
+  );
 }
 
-export default Form
+export default Form;

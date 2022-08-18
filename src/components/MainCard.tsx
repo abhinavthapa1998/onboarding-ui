@@ -4,7 +4,7 @@ import Form from "../components/Form";
 import ProgressBar from "../components/ProgressBar";
 import Title from "../components/Title";
 import Brand from "../components/Brand";
-import "../scss/components/_main-card.scss";
+
 type Props = {};
 
 function MainCard({}: Props) {
@@ -12,9 +12,12 @@ function MainCard({}: Props) {
     <div className="main-card">
       <Brand />
       <ProgressBar />
-      <Title />
+      <Title
+        heading="Welcome! First things first..."
+        subHeading="You can always change then later"
+      />
       <Form />
-      <Cards />
+      {/* <Cards /> */}
       <button className="formButton">Button</button>
     </div>
   );

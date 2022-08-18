@@ -1,12 +1,15 @@
-import React from 'react'
-
-type Props = {}
-
-function Title({}: Props) {
-  return (
-    <div><h1>Heading</h1>
-      <h2>Subheading</h2></div>
-  )
+interface Props {
+  heading: string;
+  subHeading: string;
 }
 
-export default Title
+function Title({ heading, subHeading }: Props) {
+  return (
+    <div>
+      <h1>{heading}</h1>
+      <h4>{subHeading}</h4>
+    </div>
+  );
+}
+
+export default Title;
