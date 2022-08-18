@@ -1,11 +1,21 @@
-import React from "react";
+interface Props {
+  id: number;
+  icon: any;
+  heading: string;
+  subHeading: string;
+  activeID: number;
+  handleClick: (id: number) => void;
+}
 
-type Props = {};
-
-function Card({}: Props) {
+function Card({ id, icon, heading, subHeading, activeID, handleClick }: Props) {
   return (
-    <div className="card">
-      <h5>Card</h5>
+    <div
+      onClick={() => handleClick(id)}
+      className={`cardContainer ${activeID === id && "active"}`}
+    >
+      <img className="personIcon" src={icon} alt="person" />
+      <h4>{heading}</h4>
+      <span className="bodyText">{subHeading}</span>
     </div>
   );
 }

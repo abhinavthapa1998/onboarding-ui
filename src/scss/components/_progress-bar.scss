@@ -2,6 +2,7 @@
 
 /* Form Progress */
 .progress {
+  margin: $component-margin;
   width: 90%;
   margin: 20px auto;
   text-align: center;
@@ -13,12 +14,11 @@
   width: 40px;
   height: 40px;
   border-radius: 40px;
-  border: 1px solid #d5d5da;
 }
 .progress .bar {
   position: relative;
   width: 80px;
-  height: 6px;
+  height: 1px;
   top: -33px;
   margin-left: -5px;
   margin-right: -5px;
@@ -49,7 +49,7 @@
   background: $primary;
 }
 .progress .bar.active {
-  background: linear-gradient(to right, 40%, #fff 60%);
+  background: linear-gradient(to right, $primary 50%, #fff 50%);
 }
 .progress .circle.done .label {
   color: #fff;
@@ -60,7 +60,7 @@
   color: #444;
 }
 .progress .circle.active .label {
-  color: #fff;
+  color: $white;
   background: $primary;
   box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
 }

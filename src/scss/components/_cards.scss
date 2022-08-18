@@ -1,6 +1,8 @@
 @import "../abstracts/__abstracts-dir.scss";
-.cardsContainer{
-  height:100px;
-  width:100px;
+.cardsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 100%;
   background: $white;
 }

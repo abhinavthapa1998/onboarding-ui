@@ -1,0 +1,29 @@
+@import "../abstracts/_abstracts-dir";
+.cardContainer {
+  display: flex;
+  padding: 2rem;
+  flex-direction: column;
+  height: 50%;
+  width: 30%;
+  border: solid 2px $grey;
+  border-radius: $border-radius;
+  h4 {
+    color: $black;
+    margin: 0;
+  }
+  span {
+    margin: 0;
+  }
+}
+.cardContainer.active {
+  border: solid 2px $primary;
+}
+
+.personIcon {
+  height: 20px;
+  width: 20px;
+}
+
+.bodyText {
+  color: $grey;
+}
