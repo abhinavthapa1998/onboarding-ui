@@ -2,14 +2,32 @@ import React from "react";
 
 interface Props {
   formNumber: number;
+  formSelector: (value: number) => void;
 }
 
-function ProgressBar({ formNumber }: Props) {
+function ProgressBar({ formNumber, formSelector }: Props) {
   return (
     <div className="progress">
-      <div className={`circle ${formNumber >= 1 && "done"}`}>
+      <div
+        onClick={() => formSelector(0)}
+        className={`circle ${formNumber >= 0 && "done"}`}
+      >
         <span className="label">1</span>
         <span className="title">Personal</span>
+      </div>
+
+      <span
+        className={`bar ${
+          formNumber === 0 ? "active" : formNumber >= 0 && "done"
+        }`}
+      ></span>
+
+      <div
+        onClick={() => formSelector(1)}
+        className={`circle ${formNumber >= 1 && "done"}`}
+      >
+        <span className="label">2</span>
+        <span className="title">Address</span>
       </div>
 
       <span
@@ -18,9 +36,12 @@ function ProgressBar({ formNumber }: Props) {
         }`}
       ></span>
 
-      <div className={`circle ${formNumber >= 2 && "done"}`}>
-        <span className="label">2</span>
-        <span className="title">Address</span>
+      <div
+        onClick={() => formSelector(2)}
+        className={`circle ${formNumber >= 2 && "done"}`}
+      >
+        <span className="label">3</span>
+        <span className="title">Payment</span>
       </div>
 
       <span
@@ -29,18 +50,10 @@ function ProgressBar({ formNumber }: Props) {
         }`}
       ></span>
 
-      <div className={`circle ${formNumber >= 3 && "done"}`}>
-        <span className="label">3</span>
-        <span className="title">Payment</span>
-      </div>
-
-      <span
-        className={`bar ${
-          formNumber === 3 ? "active" : formNumber >= 3 && "done"
-        }`}
-      ></span>
-
-      <div className={`circle ${formNumber >= 4 && "done"}`}>
+      <div
+        onClick={() => formSelector(3)}
+        className={`circle ${formNumber >= 3 && "done"}`}
+      >
         <span className="label">4</span>
         <span className="title">Review</span>
       </div>

@@ -1,21 +1,47 @@
-import React from "react";
+interface Props {
+  formNumber: number;
+}
 
-type Props = {};
+function Form({ formNumber }: Props) {
+  const FormSelector = ({ select }: { select: number }) => {
+    if (select === 0) {
+      return (
+        <>
+          <div className="labelInput">
+            <h5>Full Name</h5>
+            <input type="text" placeholder="Steve Jobs" />
+          </div>
+          <div className="labelInput">
+            <h5>Display Name</h5>
+            <input type="text" placeholder="Steve" />
+          </div>
+        </>
+      );
+    } else if (select === 1) {
+      return (
+        <>
+          <div className="labelInput">
+            {" "}
+            <h5>Workspace Name</h5>
+            <input type="text" placeholder="Eden" />
+          </div>
+          <div className="labelInput">
+            <h5>
+              Workspace URL <span className="optional">(optional)</span>
+            </h5>
+            <div className="workURL">
+              <h5>www.eden.com/</h5>
+              <input type="text" placeholder="Example" />
+            </div>
+          </div>
+        </>
+      );
+    } else return <></>;
+  };
 
-function Form({}: Props) {
   return (
     <div className="formContainer">
-      {/* <h6>Full Name</h6>
-      <input type="text" placeholder="Steve Jobs" />
-      <h6>Display Name</h6>
-      <input type="text" placeholder="Steve" /> */}
-      <h6>Workspace Name</h6>
-      <input type="text" placeholder="Eden" />
-      <h6>Workspace URL</h6>
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <h6>www.eden.com/</h6>
-        <input type="text" placeholder="Example" />
-      </div>
+      <FormSelector select={formNumber} />
     </div>
   );
 }

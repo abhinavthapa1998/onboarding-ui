@@ -2,9 +2,15 @@ import Card from "./Card";
 import Person from "../assets/icons/person.svg";
 import People from "../assets/icons/people.svg";
 import { useState } from "react";
-type Props = {};
 
-function Cards({}: Props) {
+interface Props {
+  formNumber: number;
+}
+
+function Cards({ formNumber }: Props) {
+  if (formNumber !== 2) {
+    return <></>;
+  }
   const [activeID, setActiveID] = useState<number>(0);
   const handleClick = (id: number): void => {
     setActiveID(id);

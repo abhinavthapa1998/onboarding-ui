@@ -2,7 +2,6 @@
 
 /* Form Progress */
 .progress {
-  margin: $component-margin;
   width: 90%;
   margin: 20px auto;
   text-align: center;
@@ -10,18 +9,24 @@
 .progress .circle,
 .progress .bar {
   display: inline-block;
-  background: #fff;
+  background: $white;
   width: 40px;
   height: 40px;
   border-radius: 40px;
 }
+.progress .circle {
+  border: solid 1px $grey-transparent;
+  cursor: pointer;
+}
+
 .progress .bar {
   position: relative;
+  background: $grey-transparent;
   width: 80px;
-  height: 1px;
+  height: 1.5px;
   top: -33px;
-  margin-left: -5px;
-  margin-right: -5px;
+  margin-left: -1px;
+  margin-right: -1px;
   border-left: none;
   border-right: none;
   border-radius: 0;
@@ -33,7 +38,7 @@
   line-height: 32px;
   border-radius: 32px;
   margin-top: 3px;
-  color: #b5b5ba;
+  color: $grey;
   font-size: 17px;
 }
 .progress .circle .title {
@@ -49,7 +54,7 @@
   background: $primary;
 }
 .progress .bar.active {
-  background: linear-gradient(to right, $primary 50%, #fff 50%);
+  background: linear-gradient(to right, $primary 50%, $grey-transparent 50%);
 }
 .progress .circle.done .label {
   color: #fff;
