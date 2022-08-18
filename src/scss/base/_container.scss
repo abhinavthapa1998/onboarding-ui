@@ -3,6 +3,12 @@
 input {
   background: $white;
   border: solid 1px $grey-transparent;
-  border-radius: 4px;
+  border-radius: $border-radius-half;
   padding: 12px;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

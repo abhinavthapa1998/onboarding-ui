@@ -22,8 +22,8 @@
     display: flex;
     align-items: center;
     border: solid 1px $grey-transparent;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    border-top-left-radius: $border-radius-half;
+    border-bottom-left-radius: $border-radius-half;
     background: $grey-transparent;
     height: 100%;
   }

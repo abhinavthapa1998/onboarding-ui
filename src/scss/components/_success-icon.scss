@@ -1,9 +1,7 @@
 @import "../abstracts/_abstracts-dir";
 
 .checkContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center;
   border-radius: 50%;
   height: 4rem;
   width: 4rem;

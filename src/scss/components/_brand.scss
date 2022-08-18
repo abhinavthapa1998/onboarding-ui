@@ -1,7 +1,6 @@
 @import "../abstracts/_abstracts-dir";
 .brand {
-  display: flex;
-  align-items: center;
+  @include flex-center;
 }
 
 .brandImage {
