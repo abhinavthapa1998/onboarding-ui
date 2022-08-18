@@ -1,26 +1,8 @@
 @import "../abstracts/__abstracts-dir.scss";
 
-h1,
-h2,
-h6 {
-  color: $black;
-}
-h4 {
-  color: $grey;
-}
 input {
   background: $white;
   border: solid 1px $grey-transparent;
   border-radius: 4px;
   padding: 12px;
-}
-
-body {
-  line-height: 1.5;
-}
-
-@media (max-width: 820px) {
-  h1 {
-    font-size: 24px;
-  }
 }

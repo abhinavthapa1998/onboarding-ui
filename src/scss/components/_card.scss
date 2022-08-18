@@ -35,9 +35,9 @@
   color: $grey;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $laptop-breakpoint) {
   .cardContainer {
-    width: 80%;
+    width: $size-w-space;
     margin-bottom: 1rem;
   }
 }

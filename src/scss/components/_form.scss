@@ -45,7 +45,7 @@
   color: $grey-transparent;
 }
 
-@media (max-width: 768px) {
+@media (max-width: $laptop-breakpoint) {
   .formContainer {
     width: 100%;
   }

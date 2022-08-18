@@ -86,7 +86,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: $laptop-breakpoint) {
   .progress .bar {
     width: 5%;
   }

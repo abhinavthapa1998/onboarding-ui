@@ -1,0 +1,20 @@
+@import "../abstracts/__abstracts-dir.scss";
+
+h1,
+h2,
+h6 {
+  color: $black;
+}
+h4 {
+  color: $grey;
+}
+
+body {
+  line-height: 1.5;
+}
+
+@media (max-width: 820px) {
+  h1 {
+    font-size: 24px;
+  }
+}
