@@ -18,3 +18,9 @@ input {
 body {
   line-height: 1.5;
 }
+
+@media (max-width: 820px) {
+  h1 {
+    font-size: 24px;
+  }
+}

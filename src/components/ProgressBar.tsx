@@ -13,7 +13,6 @@ function ProgressBar({ formNumber, formSelector }: Props) {
         className={`circle ${formNumber >= 0 && "done"}`}
       >
         <span className="label">1</span>
-        <span className="title">Personal</span>
       </div>
 
       <span
@@ -27,7 +26,6 @@ function ProgressBar({ formNumber, formSelector }: Props) {
         className={`circle ${formNumber >= 1 && "done"}`}
       >
         <span className="label">2</span>
-        <span className="title">Address</span>
       </div>
 
       <span
@@ -41,7 +39,6 @@ function ProgressBar({ formNumber, formSelector }: Props) {
         className={`circle ${formNumber >= 2 && "done"}`}
       >
         <span className="label">3</span>
-        <span className="title">Payment</span>
       </div>
 
       <span
@@ -55,7 +52,6 @@ function ProgressBar({ formNumber, formSelector }: Props) {
         className={`circle ${formNumber >= 3 && "done"}`}
       >
         <span className="label">4</span>
-        <span className="title">Review</span>
       </div>
     </div>
   );

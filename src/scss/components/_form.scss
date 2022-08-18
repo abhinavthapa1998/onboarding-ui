@@ -2,7 +2,7 @@
 .formContainer {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   h5 {
     color: $grey;
     margin: 4px 0px;
@@ -43,4 +43,10 @@
 
 .optional {
   color: $grey-transparent;
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    width: 100%;
+  }
 }

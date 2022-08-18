@@ -2,13 +2,20 @@
 
 .formButton {
   border-radius: 4px;
+  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border: none;
   padding: 1.5em;
   height: 30px;
-  width: 100%;
+  width: 90%;
   color: $white;
   background: $primary;
+}
+
+@media (max-width: 768px) {
+  .formButton {
+    width: 100%;
+  }
 }

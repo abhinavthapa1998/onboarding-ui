@@ -13,7 +13,11 @@ function Card({ id, icon, heading, subHeading, activeID, handleClick }: Props) {
       onClick={() => handleClick(id)}
       className={`cardContainer ${activeID === id && "active"}`}
     >
-      <img className="personIcon" src={icon} alt="person" />
+      <img
+        className={`personIcon ${activeID === id && "activeIcon"}`}
+        src={icon}
+        alt="person"
+      />
       <h4>{heading}</h4>
       <span className="bodyText">{subHeading}</span>
     </div>
